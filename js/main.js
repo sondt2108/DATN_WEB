@@ -52,6 +52,22 @@
         $("body").removeClass("over_hid");
     });
 
+
+    // filter menu
+    $(".filter__open").on('click', function () {
+        $(".filter__menu__wrapper").addClass("show__filter__menu__wrapper");
+        $(".filter__menu__overlay").addClass("active_filter");
+        $("body").addClass("over_hid_filter");
+    });
+
+   
+
+    $(".filter__menu__overlay").on('click', function () {
+        $(".filter__menu__wrapper").removeClass("show__filter__menu__wrapper");
+        $(".filter__menu__overlay").removeClass("active_filter");
+        $("body").removeClass("over_hid_filter");
+    });
+
     /*------------------
 		Navigation
 	--------------------*/
@@ -66,15 +82,11 @@
     $(".categories__slider").owlCarousel({
         loop: true,
         margin: 0,
-        items: 4,
+        
         dots: false,
         nav: true,
         navText: ["<span class='fa fa-angle-left'><span/>", "<span class='fa fa-angle-right'><span/>"],
-        animateOut: 'fadeOut',
-        animateIn: 'fadeIn',
-        smartSpeed: 1200,
         autoHeight: false,
-        autoplay: true,
         responsive: {
 
             0: {
@@ -95,6 +107,8 @@
         }
     });
 
+
+   
 
     
 
