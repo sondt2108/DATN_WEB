@@ -22,9 +22,8 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link rel="stylesheet" href="css/product.css">
     <link rel="stylesheet" href="css/slideshow.css">
-    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/login-register.css">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.0.8/popper.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js'></script>
@@ -32,7 +31,7 @@
 </head>
 
 <body>
-     <!-- Humberger Begin -->
+    <!-- Humberger Begin -->
     <div class="humberger__menu__overlay"></div>
     <div class="humberger__menu__wrapper">
         <div class="humberger__menu__logo">
@@ -55,6 +54,7 @@
                     <li><a href="#">English</a></li>
                 </ul>
             </div>
+
             <div class="header__top__right__language">
                 <div> <i class="fa fa-user"></i> Tài khoản</div>
                 <span class="arrow_carrot-down"></span>
@@ -212,182 +212,72 @@
 
         </div>
     </header>
+    <!-- end header -->
 
     <section>
-      <div class="giohang container">
-        <h1 class="title-gh">GIỎ HÀNG</h1>
-        <div class="row">
-          <div class="col-lg-9">
-            <div class="card border-white">
-              <div class="table-responsive">
-                <table class="table table-borderless table-shopping-cart">
-                  <thead class="text-muted">
-                    <tr class="small text-uppercase">
-                      <th scope="col" width="400">Sản Phẩm</th>
-                      <th scope="col" width="150" style="text-align: center">
-                        Số Lượng
-                      </th>
-                      <th
-                        scope="col"
-                        class="text-center"
-                        width="150"
-                        style="text-align: center"
+        <div class="container">
+            <div class="row my-5 justify-content-center">
+              <div class="col-lg-6 col-md-8 col-sm-10 h-100 mt-4 py-3">
+                <div class="login p-1">
+                  <div class="text-center">
+                    <h4 class="title-head">Đăng nhập tài khoản</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="form-group">
+                      <label class="title-email"
+                        ><i class="icdangnhap fas fa-envelope"></i>Email<span
+                          class="required"
+                          >*</span
+                        ></label
                       >
-                        Giá
-                      </th>
-                      <th
-                        scope="col"
-                        class="text-center d-none d-md-block"
-                        width="50"
-                      ></th>
-                    </tr>
-                  </thead>
-  
-                  <tbody>
-                    <tr>
-                      <td>
-                        <figure class="itemside align-items-center">
-                          <div class="aside">
-                            <img
-                              src="https://minio.thecoffeehouse.com/image/admin/caphe-suada--bacsiu_063797_400x400.jpg"
-                              class="img-sm"
-                            />
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email_input"
+                        placeholder="Email"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="password_input" class="title-email"
+                        ><i class="icdangnhap fas fa-lock"></i>Mật khẩu<span
+                          class="required"
+                          >*</span
+                        ></label
+                      >
+                      <input
+                        type="password"
+                        class="d-block form-control"
+                        id="password_input"
+                        placeholder="Mật khẩu"
+                      />
+                    </div>
+                    <div class="pt-3 text-center">
+                      <button type="button" class="btn-dn btn" value="Đăng nhập">
+                        Đăng Nhập
+                      </button>
+                    </div>
+                  </div>
+                  <div class="pt-1 text-center">
+                    <a href="" class="title-qmk">Quên mật khẩu?</a>
                           </div>
-                          <figcaption class="info">
-                            <p href="#" class="title-ten" data-abc="true">
-                              Hồng Trà Sữa Trân Châu
-                            </p>
-                            <button
-                              class="btn quantity-left-minus1"
-                              data-abc="true"
-                            >
-                              <i class="fa fa-trash-alt"></i>
-                            </button>
-                          </figcaption>
-                        </figure>
-                      </td>
-                      <td class="quantity-sl input-group">
-                        <button
-                          type="button"
-                          class="quantity-left-minus btn"
-                          data-type="minus"
-                          data-field=""
-                        >
-                          <i class="fab fa-minus"></i>
-                        </button>
-                        <input
-                          type="text"
-                          name="quant[1]"
-                          class="form-control"
-                          value="1"
-                          min="1"
-                          max="10"
-                          style="text-align: center"
-                        />
-                        <button
-                          type="button"
-                          class="quantity-right-plus btn"
-                          data-type="plus"
-                          data-field=""
-                        >
-                          <i class="fab fa-plus"></i>
-                        </button>
-                      </td>
-                      <td>
-                        <div class="price-wrap">
-                          <var class="price">32.000đ</var>
-                        </div>
-                      </td>
-                    </tr>
-  
-                    <tr>
-                      <td>
-                        <figure class="itemside align-items-center">
-                          <div class="aside">
-                            <img
-                              src="https://minio.thecoffeehouse.com/image/admin/caphe-suada--bacsiu_063797_400x400.jpg"
-                              class="img-sm"
-                            />
+                          <hr class="md-4" />
+                          <div class="text-center">
+                              <p>
+                                  Bạn chưa có tài khoản. Đăng ký
+                                  <a href="./dangki.html" class="title-dk">tại đây.</a>
+                              </p>
                           </div>
-                          <figcaption class="info">
-                            <p href="#" class="title-ten" data-abc="true">
-                              Hồng Trà Sữa Trân Châu
-                            </p>
-                            <button
-                              class="btn quantity-left-minus1"
-                              data-abc="true"
-                            >
-                              <i class="fas fa-trash-alt"></i>
-                            </button>
-                          </figcaption>
-                        </figure>
-                      </td>
-                      <td class="quantity-sl input-group">
-                        <button
-                          type="button"
-                          class="quantity-left-minus btn"
-                          data-type="minus"
-                          data-field=""
-                        >
-                          <i class="fas fa-minus"></i>
-                        </button>
-                        <input
-                          type="text"
-                          name="quant[1]"
-                          class="form-control"
-                          value="1"
-                          min="1"
-                          max="10"
-                          style="text-align: center"
-                        />
-                        <button
-                          type="button"
-                          class="quantity-right-plus btn"
-                          data-type="plus"
-                          data-field=""
-                        >
-                          <i class="fas fa-plus"></i>
-                        </button>
-                      </td>
-                      <td>
-                        <div class="price-wrap">
-                          <var class="price">32.000đ</var>
-                        </div>
-                      </td>
-                    </tr>
-                    <hr class="md-4" />
-                  </tbody>
-                </table>
-                <hr class="md-4" />
+                      </div>
+                  </div>
               </div>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="card border-white">
-              <div class="title-gia card-body">
-                <dl class="dlist-align">
-                  <dt>Tạm tính</dt>
-                  <dd class="text-right ml-3">396.000₫</dd>
-                </dl>
-                <dl class="dlist-align">
-                  <dt>Thành Tiền</dt>
-                  <dd class="text-right totals_price ml-3">396.000₫</dd>
-                </dl>
-                <hr />
-                <button href="#" class="btn btn-tt mt-3" data-abc="true">
-                  THANH TOÁN NGAY
-                </button>
-                <button href="#" class="btn btn-ttmh mt-3" data-abc="true">
-                  TIẾP TỤC MUA HÀNG
-                </button>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
-   
+
+    
+    <div id="back-top">
+        <a title="Go to Top" href="#"> <i class="fa fa-angle-double-up"></i></a>
+    </div>
     
 
 
