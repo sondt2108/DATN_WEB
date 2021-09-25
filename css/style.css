@@ -417,6 +417,8 @@ ol {
 
 .header__menu {
 	padding: 24px 0;
+	max-height: 60px;
+    padding: 10px;
 }
 
 .header__menu ul li {
@@ -495,6 +497,22 @@ ol {
 .header__cart {
 	text-align: right;
 	padding: 24px 0;
+}
+
+.header__cart span {
+    height: 13px;
+    width: 13px;
+    background: #395781;
+    font-size: 10px;
+    color: #ffffff;
+    line-height: 13px;
+    text-align: center;
+    font-weight: 700;
+    display: inline-block;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: -12px;
 }
 
 .header__cart ul {
@@ -795,23 +813,24 @@ ol {
 }
 
 .categories__slider.owl-carousel .owl-nav button {
-	font-size: 18px;
-	color: #1c1c1c;
-	height: 70px;
-	width: 30px;
-	line-height: 70px;
-	text-align: center;
-	border: 1px solid #ebebeb;
-	position: absolute;
-	left: -35px;
-	top: 50%;
-	-webkit-transform: translateY(-35px);
-	background: #ffffff;
+	font-size: 20px;
+    color: #878fa0;
+    height: 50px;
+    width: 30px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #f1f5f6;
+    border-radius: 5px;
+    box-shadow: 0 7px 10px 0 rgb(72 139 216 / 20%);
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-35px);
+    background: #ffffff;
 }
 
 .categories__slider.owl-carousel .owl-nav button.owl-next {
 	left: auto;
-	right: -35px;
+	right: 0px;
 }
 
 /*---------------------
@@ -2920,9 +2939,7 @@ ol {
 /* Medium Device = 1200px */
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-	.header__menu ul li {
-		margin-right: 45px;
-	}
+	
 	.hero__search__form {
 		width: 490px;
 	}
@@ -2945,11 +2962,16 @@ ol {
 		width: 240px;
 	}
 
+
 }
 
 /* Tablet Device = 768px */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+	.banner-mobile{
+	margin-left: 10px;
+    margin-top: 20px;
+	}
 	.hero__categories {
 		margin-bottom: 30px;
 	}
@@ -3213,11 +3235,19 @@ ol {
 	.over_hid {
 		overflow: hidden;
 	}
+	.banner-mobile{
+		padding-left: 15px;
+    margin-top: 20px;
+	}
 }
 
 /* Wide Mobile = 480px */
 
 @media only screen and (max-width: 767px) {
+	.banner-mobile{
+	margin-left: 10px;
+    margin-top: 20px;
+	}
 	.hero__categories {
 		margin-bottom: 30px;
 	}
@@ -3538,6 +3568,10 @@ ol {
 /* Small Device = 320px */
 
 @media only screen and (max-width: 479px) {
+	.banner-mobile{
+	margin-left: 10px;
+    margin-top: 20px;
+	}
 	.hero__search__form form .hero__search__categories {
 		display: none;
 	}
@@ -3657,6 +3691,28 @@ ol {
     color: #495057;
     
 
+}
+
+/* back-top */
+#back-top {
+	background: #fd8f5f;
+    height: 35px;
+    width: 35px;
+    right: 15px;
+    bottom: 15px;
+    position: fixed;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 30px;
+    border: 2px solid transparent;
+    box-shadow: 0 0 10px 3px rgb(108 98 98 / 20%);
+}
+
+.header-bottom {
+	max-height: 65px;
+	background-color: #dddddd;
 }
 
 
