@@ -24,11 +24,9 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/slideshow.css">
     <link rel="stylesheet" href="css/chitietsp.css">
+    <link rel="stylesheet" href="css/modalhide.css">
     <link rel='stylesheet' href='https://sachinchoolur.github.io/lightslider/dist/css/lightslider.css'>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js">
+
     <script src="js/chitietsp.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.0.8/popper.min.js'></script>
@@ -282,13 +280,13 @@
                         <div class="product-description">
     
                             <div class="buttons">
-                                <button class="btn btn-outline-primary btn-long cart">Thêm vào giỏ hàng</button>
+                                <button class="btn btn-outline-primary btn-long cart" data-toggle="modal"
+                                data-target=".bd-example-modal-lg">Thêm vào giỏ hàng</button>
                                 <button class="btn btn-outline-primary btn-long buy">Mua Ngay</button>
-    
                             </div>
                             <div class="buttons">
-                                <button class="btn btn-outline-primary btn-long buy">Yêu cầu gọi lại</button>
-                                <button class="btn btn-outline-primary btn-long buy">📞 0938338338</button>
+                                <button class="btn btn-primary btn-long buy">Yêu cầu gọi lại</button>
+                                <button class="btn btn-primary btn-long buy">📞 0938338338</button>
                             </div>
                             
                         </div>
@@ -395,6 +393,158 @@
                 </div>
             </div>
         </div>
+
+        <!-- Modal -->
+    <div
+    class="modal fade bd-example-modal-lg"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="myExtraLargeModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p class="modal-title" id="exampleModalLabel">
+            Bạn đã thêm
+            <a href="" class="text-thanhtoan"
+              >Đèn LED âm trần điều chỉnh góc chiếu Panasonic 7W NNNC7629188 </a
+            >vào giỏ hàng
+          </p>
+        </div>
+        <div class="modal-header">
+          <p class="text-tengh modal-title" id="exampleModalLabel">
+            Giỏ hàng của bán có 1 sản phẩm
+          </p>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="card border-white">
+                <div class="table-responsive">
+                  <table class="table table-borderless table-shopping-cart">
+                    <thead class="text-muted">
+                      <tr class="small text-uppercase">
+                        <th scope="col" width="350">Sản Phẩm</th>
+                        <th
+                          scope="col"
+                          width="200"
+                          style="text-align: center"
+                        >
+                          Số Lượng
+                        </th>
+                        <th
+                          scope="col"
+                          class="text-center"
+                          width="150"
+                          style="text-align: center"
+                        >
+                          Đơn Giá
+                        </th>
+                        <th
+                          scope="col"
+                          class="text-center"
+                          width="150"
+                          style="text-align: center"
+                        >
+                          Thành Tiền
+                        </th>
+                        <th
+                          scope="col"
+                          class="text-center d-none d-md-block"
+                          width="50"
+                        ></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <figure class="itemside align-items-center">
+                            <div class="aside">
+                              <img
+                                src="https://minio.thecoffeehouse.com/image/admin/caphe-suada--bacsiu_063797_400x400.jpg"
+                                class="img-sm"
+                              />
+                            </div>
+                            <figcaption class="info">
+                              <p href="#" class="title-ten" data-abc="true">
+                                Hồng Trà Sữa Trân Châu
+                              </p>
+                              <button
+                                class="btn quantity-left-minus1"
+                                data-abc="true"
+                              >
+                                Xoá
+                              </button>
+                            </figcaption>
+                          </figure>
+                        </td>
+                        <td class="quantity-sl input-group">
+                          <button
+                            type="button"
+                            class="quantity-left-minus btn"
+                            data-type="minus"
+                            data-field=""
+                          >
+                            <i class="fa-gh fa fa-minus"></i>
+                          </button>
+                          <input
+                            type="text"
+                            name="quant[1]"
+                            class="form-control"
+                            value="1"
+                            min="1"
+                            max="10"
+                            style="text-align: center"
+                          />
+                          <button
+                            type="button"
+                            class="quantity-right-plus btn"
+                            data-type="plus"
+                            data-field=""
+                          >
+                            <i class="fa-gh fa fa-plus"></i>
+                          </button>
+                        </td>
+                        <td>
+                          <div class="price-wrap">
+                            <var class="price">32.000đ</var>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="price-wrap">
+                            <var class="price">32.000đ</var>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="col md-3">
+            <i class="icon-price fa fa-angle-left"></i
+            ><a href="#" class="text-thanhtoan" data-dismiss="modal">Tiếp tục mua hàng</a>
+          </div>
+          <p>Thành Tiền: <span class="text-gia">32.000đ</span></p>
+        </div>
+        <div class="modal-footer">
+          <div class="col text-center">
+            <button type="button" class="btn btn-tt">
+              THANH TOÁN ĐƠN HÀNG
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="back-top">
+    <a title="Go to Top" href="#"> <i class="fa fa-angle-double-up"></i></a>
+  </div>
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
         <script src='https://sachinchoolur.github.io/lightslider/dist/js/lightslider.js'></script>
         <script>
